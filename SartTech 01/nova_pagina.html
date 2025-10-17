@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página teste usando HTML e CSS</title>
     <link rel="stylesheet" href="CSS/nova_pagina.css" type="text/css">
+    <script src="nova_pagina.js" type="text/javascript"></script>
 </head>
 <body>
     <main>
@@ -22,10 +23,9 @@
                 </div>
 
                 <nav id="menu_direto">
-                    <a href="#" class="link1"> <img src="images/figura4.png" alt=""> </a>
+                    <a href="#" class="link1"> <img src="images/figura4.png"> </a>
                     <a href="#" class="link2">Conectar</a>
-                    <a href="#" class="link3"> Cadastre-se Gratuitamnete</a>
-                    <a></a>
+                    <a href="#" class="link3" onclick="abrir_modal()"> Cadastre-se Gratuitamnete</a>
                 </nav>
 
         </header>
@@ -73,6 +73,38 @@
             </section>
     
         <footer id="rodape"> RODAPÉ </footer>
+
+        <!--inicio modal-->
+        <!--tela escura transparente no fundo do modal-->
+        <div class="janela_escura">
+        <div class="modal">
+            <div class="fechar" onclick="fechar_modal()">X</div>
+            <br/>
+            <form>
+				<legend> <h2> Cadastre-se </h2> </legend>
+				<br />
+					<label>Digite seu nome: 
+					<input type="text" size="30" maxlength="30"  />
+					</label><br />
+					<label>Digite seu e-mail: 
+					<input type="mail" size="30" maxlength="30"  />
+					</label><br />
+					<label>Seu gênero: 
+					<select name="genero">
+						<option>masculino</option>
+						<option>feminino</option>
+						<option>outro</option>
+					</select>
+					</label><br />
+
+					<label>Digite sua senha:
+					<input type="password" size="8" />
+					</label>
+					<input type="submit" value="enviar" class="enviar" />
+				
+			</form>
+
+        </div>
     </main>
 </body>
 </html>
